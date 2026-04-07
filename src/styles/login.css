@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('https://picsum.photos/1920/1080') no-repeat center center fixed ;
+}
+.login-box{
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+.login-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
