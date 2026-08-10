@@ -1,0 +1,354 @@
+/*-------------------HEADER-------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    height: 70px;
+    align-items: center;
+
+}
+.logo{
+    flex: 1;
+}
+.menu{
+    flex: 2;
+    display: flex;
+}
+.menu > li{
+    padding: 0 12px;
+}
+.menu > li a{
+    font-size: 15px;
+    font-weight: bold;
+}
+.others{
+    flex: 1;
+    display: flex;
+}
+.others > li{
+    padding: 0 12px;
+}
+.others > li:first-child{
+    position: relative;
+}
+.others > li:first-child input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+.others > li:first-child i{
+    position: absolute;
+    right: 10px;
+}
+.others input{
+    outline: none;
+}
+
+/*-------------------PAYMENT-------------------*/
+.thanhToan {
+    padding: 30px 0;
+    background-color: #fcfcfc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- THANH TIẾN TRÌNH  --- */
+.payment-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.payment-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    position: relative;
+}
+/* Đường kẻ ngang xám nối các icon */
+.payment-top::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #dddddd;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+.payment-top-item {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dddddd;
+    position: relative;
+    z-index: 2; /*Để icon nằm đè lên đường kẻ*/
+    font-size: 14px;
+    
+}
+.payment-top-item span {
+    position: absolute;
+    top: 55px; /* Đẩy chữ xuống dưới vòng tròn */
+    white-space: nowrap; /* Không cho chữ bị nhảy dòng */
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #888; 
+}
+/* Màu chữ cho bước hiện tại (Thanh toán) */
+.payment-top-payment span {
+    color: #333;
+    font-weight: bold;
+}
+.pay-ct-left-img i {
+  font-size: 40px; /* Thay đổi giá trị này để tăng hoặc giảm kích thước */
+}
+/* --- BỐ CỤC NỘI DUNG (LEFT & RIGHT) --- */
+.pay-content {
+    display: flex;
+    gap: 50px; 
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 30px auto; 
+    padding: 0 20px;
+}
+.pay-ct-left {
+   width: 60%; 
+   padding-right: 20px;
+}
+.pay-ct-right {
+    width: 40%;
+    border-left: 2px solid #dddddd !important; 
+    padding-left: 40px;
+    min-height: 350px; 
+}
+
+.pay-ct-left{
+    width: 60%;
+}
+.pay-ct-left p,label{
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+}
+.pay-ct-right{
+    width: 40%;
+    border-left: 2px solid white;
+    padding-left: 12px;
+}
+.pay-ct-right-button{
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px dashed #dddddd;
+}
+.pay-ct-right-button input{
+    height: 30px;
+    width: 200px;
+    margin-right: 100px;
+    padding-left: 12px;
+}
+.pay-ct-right-button button{
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.pay-ct-right-mnv{
+    margin-top: 20px;
+}
+.pay-ct-right-mnv select{
+    height: 30px;
+    width: 100%;
+    color: #75758A;
+    padding-left: 12px;
+}
+.pay-ct-right-payment{
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+}
+.pay-ct-right-payment button{
+    height: 35px;
+    padding: 0 20px;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+.pay-ct-right-payment button:hover{
+    background-color: black;
+    color: #fff;
+}
+
+
+/*----------------FOOTER------------*/
+.footer {
+    background: #f5f5f5;
+    padding: 40px 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-col {
+    padding-right: 20px;
+    border-right: 2px solid #ddd;
+}
+
+/* Cột */
+.footer-col h3 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Social */
+.social i {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Payment */
+.payment img {
+    width: 60px;
+    margin: 5px;
+}
+
+/* Shipping */
+.shipping img {
+    width: 60px;
+    margin: 5px;
+}
+
+/* List */
+.footer-col ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+/* Subscribe */
+.subscribe {
+    display: flex;
+    margin-top: 10px;
+}
+
+.subscribe input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.subscribe button {
+    background: #ccc;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Bộ công thương */
+.bct {
+    margin-top: 15px;
+    width: 150px;
+}
+
+.fb i {
+    background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.fb i:hover {
+    background-color: blue;
+    color: white;
+    transition: 0.5s;
+    border-radius: 20%;
+}
+
+.ins i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.ins i:hover {
+    background-color: #cc2366;
+    color: white;
+    transition: 0.5s;
+    border-radius: 20%;
+}
+
+
+.tt i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.tt i:hover {
+    background-color: slateblue;
+    color: white;
+    transition: 0.5s;
+    border-radius: 20%;
+}
+
+.tk i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.tk i:hover {
+    background-color: black;
+    color: white;
+    border-radius: 20%;
+    transition: 0.5s;
+}
+.ytb i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.ytb i:hover {
+    background-color: red;
+    color: white;
+    transition: 0.5s;
+}
+

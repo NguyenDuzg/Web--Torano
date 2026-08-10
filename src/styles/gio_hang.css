@@ -1,0 +1,461 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header {
+    padding: 0 0px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.header-bottom {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #222;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb{
+    background:#f3f3f3;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+.breadcrumb a{
+    text-decoration:none;
+    color:#000;
+    font-size:15px;
+}
+
+.breadcrumb span{
+    margin:0 1px;
+    color:#777;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 260px; 
+}
+
+.menu {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    gap: 25px;
+}
+
+.menu > li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.menu > li:hover .sub-menu {
+     visibility: visible;
+     top: 30px;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 150px;
+    border: 2px solid #ccc;
+    padding: 10px 0 10px 20px;
+    line-height: 20px;
+    visibility: hidden;
+    top: 40px;
+    transition: 0.3s;
+    background-color: white;
+    z-index: 999;
+}
+
+.menu > li a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    gap: 25px;
+}
+.other {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.other > li {
+    padding: 0 12px;
+}
+
+.other > li:first-child input {
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+.other > li:first-child {
+    position: relative;
+    
+}
+
+.other > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+
+/*___________CART____________*/
+.cart {
+    padding: 60px;
+}
+
+.cart-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-top {
+    height: 2px;
+    width: 60%;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 100px;
+}
+
+.cart-top-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.cart-top-item i {
+    color: #dddddd;
+}
+
+.cart-top-cart {
+    border: 1px solid #0DB7EA;
+}
+
+.cart-top-cart i {
+    color: #0DB7EA;
+}
+
+.cart-content {
+    display: flex; /* Kích hoạt chế độ dàn hàng ngang */
+    justify-content: space-between; /* Đẩy 2 cột ra xa nhau */
+    gap: 30px; /* Khoảng cách giữa 2 cột */
+    padding: 20px 0;
+}
+
+.cart-content-left {
+    flex: 2;
+    padding-right: 12px;
+}
+
+.cart-content-left table {
+    width: 100%;
+    text-align: center;
+}
+
+.cart-content-left table th {
+    padding-bottom: 30px;
+    font-family: var(--main-text-font);
+    font-size: 12px;
+    text-transform: uppercase;
+    color:#333;
+    border-collapse: collapse;
+    border-bottom: 2px solid #dddddd;
+}
+
+.cart-content-left table p {
+    font-size: 12px;
+    font-family: var(--main-text-font);
+    color:#333;
+}
+
+.cart-content-left table input {
+    width: 25px;
+}
+
+.cart-content-left table span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.cart-content-left td:first-child img {
+    width: 130px;
+}
+
+.cart-content-left td:nth-child(2) {
+    max-width: 120px;
+}
+
+.cart-content-left td:nth-child(3)  img {
+    width: 40px;
+}
+
+.cart-content-right {
+    flex: 1;
+    padding-left: 30px;
+    border-left: 2px solid #dddddd;
+}
+
+.cart-content-right table {
+    width: 100%;
+}
+
+.cart-content-right table th {
+    font-family: var(--main-text-font);
+    font-size: 12px;
+    color: #333;
+    padding: 6px 0;
+}
+
+.cart-content-right tr:nth-child(4) td {
+    border-bottom: 2px solid #dddddd;
+}
+
+.cart-content-right tr td:last-child {
+    text-align: right;
+}
+
+.cacart-content-right-text {
+    margin: 20px 0 ;
+    text-align: center;
+}
+
+.cart-content-right-text p {
+     font-family: var(--main-text-font);
+    font-size: 20px;
+    color: #333;
+}
+
+.cart-content-right-buttom {
+    text-align: center;
+    align-items: center;
+}
+
+.cart-content-right-buttom button {
+    padding: 0 15px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.cart-content-right-buttom button:first-child {
+    background-color: #fff;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+.cart-content-right-buttom button:first-child:hover {
+    background-color: #dddddd;
+}
+
+.cart-content-right-buttom button:last-child {
+    /* background-color: black; */
+    color: #fff;
+    border: none;
+    border: 1px solid black;
+}
+
+.cart-content-right-buttom button:last-child:hover {
+    background-color: #dddddd;
+    color: #333;
+}
+
+.cart-content-right-dangnhap {
+    margin-top: 20px;
+}
+
+.cart-content-right-dangnhap p {
+      font-family: var(--main-text-font);
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+}
+/*----------------Đít------------*/
+.footer {
+    background: #f5f5f5;
+    padding: 40px 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-col {
+    padding-right: 20px;
+    border-right: 2px solid #ddd;
+}
+
+/* Cột */
+.footer-col h3 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Social */
+.social i {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Payment */
+.payment img {
+    width: 60px;
+    margin: 5px;
+}
+
+/* Shipping */
+.shipping img {
+    width: 60px;
+    margin: 5px;
+}
+
+/* List */
+.footer-col ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+/* Subscribe */
+.subscribe {
+    display: flex;
+    margin-top: 10px;
+}
+
+.subscribe input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.subscribe button {
+    background: #ccc;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Bộ công thương */
+.bct {
+    margin-top: 15px;
+    width: 150px;
+}
+
+.fb i {
+    background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.fb i:hover {
+    background-color: blue;
+    color: white;
+    transition: 0.5s;
+    border-radius: 20%;
+}
+
+.ins i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.ins i:hover {
+    background-color: #cc2366;
+    color: white;
+    transition: 0.5s;
+    border-radius: 20%;
+}
+
+
+.tt i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.tt i:hover {
+    background-color: slateblue;
+    color: white;
+    transition: 0.5s;
+    border-radius: 20%;
+}
+
+.tk i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.tk i:hover {
+    background-color: black;
+    color: white;
+    border-radius: 20%;
+    transition: 0.5s;
+}
+.ytb i {
+     background-color: white;
+    color: black;
+    border-radius: 20%;
+}
+
+.ytb i:hover {
+    background-color: red;
+    color: white;
+    transition: 0.5s;
+}
+

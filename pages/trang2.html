@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torano - Thời trang nam</title>
+    <link rel="stylesheet" href="/src/styles/danhmuc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="https://theme.hstatic.net/200000690725/1001078549/14/logo.png?v=1075" width="200px" alt="Logo"></a>
+        </div>
+
+        <div class="menu">
+            <li><a href="/pages/danhmuc.html">Sản Phẩm Mới</a></li>
+            <li><a href="/pages/danhmucsale.html">Danh mục sale</a></li>
+            <li><a href="/pages/ao_nam.html">Áo nam</a></li>
+            <li><a href="/pages/quan_nam.html">Quần nam</a></li>
+            <li><a href="#">Phụ kiện</a></li>
+            <li><a href="#">Hệ thống cửa hàng</a></li>
+        </div>
+
+        <div class="icon">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <li><a href="/pages/login.html" class="fa-solid fa-user"></a></li>
+            <li class="cart-wrapper">
+                <a href="javascript:void(0)" class="fa-solid fa-bag-shopping">
+                    <span id="cart-count">0</span> <!-- Số lượng hiển thị trên icon -->
+                </a>
+
+                <!-- Khung hiển thị khi di chuột vào -->
+                <div class="mini-cart">
+                    <h3>Sản phẩm mới thêm</h3>
+                    <ul id="cart-items-list">
+                        <!-- Sản phẩm sẽ tự động hiện ở đây nhờ JavaScript -->
+                        <p class="empty-cart-msg">Giỏ hàng trống</p>
+                    </ul>
+                    <div class="cart-footer">
+                        <a href="/pages/gio_hang.html">Xem giỏ hàng</a>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </header>
+    <!-- -----------------------------------------category -->
+    <section class="category">
+        <div class="contaner">
+            <div class="category-top row">
+                <a href="/pages/danhmuc.html">Trang chủ</a>
+                <span>/</span>
+                <a href="/pages/danhmuc.html">Sản Phẩm Mới</a>
+                <span>/</span>
+                <a href="#">Trang 2</a>
+            </div>
+        </div>
+
+        <div class="contaner">
+            <div class="row">
+                <div class="category-left">
+                    <ul>
+                        <li class="category-list-li"><a href="#">Danh mục sản phẩm</a>
+                            <ul class="list">
+                                <li><a href="/pages/danhmuc.html">Sản Phẩm Mới</a></li>
+                                <li><a href="/pages/danhmucsale.html">Danh mục sale</a></li>
+                                <li><a href="/pages/aonam.html">Áo nam</a></li>
+                                <li><a href="/pages/quannam.html">Quần nam</a></li>
+                                <li><a href="/pages/phukien.html">Phụ kiện</a></li>
+                                <li><a href="/pages/he_thong_cua_hang.html">Hệ thống cửa hàng</a></li>
+                            </ul>
+                        </li>
+                        <li class="category-list-li"><a href="#">Khoảng giá</a>
+                            <ul class="list">
+                                <li><a> Dưới 100.000đ</a></li>
+                                <li><a> 100.000đ - 500.000đ</a></li>
+                                <li><a> 500.000đ - 1.000.000đ</a></li>
+                                <li><a> 1.000.000đ - 5.000.000đ</a></li>
+                                <li><a> Trên 5.000.000đ</a></li>
+                            </ul>
+                        </li>
+                        <li class="category-list-li"><a href="#">Size</a>
+                            <ul class="list">
+                                <li><a>XS</a></li>
+                                <li><a>S</a></li>
+                                <li><a>M</a></li>
+                                <li><a>L</a></li>
+                                <li><a>XL</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="category-right row">
+                    <div class="category-right-top-item">
+                        <p>Sản phẩm mới</p>
+                    </div>
+                    <!-- <div class="category-right-top-item">
+                        <button><span>Bộ lọc<i class="fas fa-sort-down"></i></span></button>
+                    </div> -->
+                    <div class="category-right-top-item">
+                        <select>
+                            <option value="">Sản phẩm nổi bật</option>
+                            <option value="">Giá thấp đến cao</option>
+                            <option value="">Giá cao đến thấp</option>
+                            <option value="">Tên A-Z</option>
+                            <option value="">Tên Z-A</option>
+                            <option value="">Mới nhất</option>
+                            <option value="">Cũ nhất</option>
+                        </select>
+                    </div>
+                    <div class="category-right-content row">
+                        <div class="category-right-content-item">
+                            <img src="https://cdn.hstatic.net/products/200000690725/_o_web_742ec1f1b7ae413f80140b65cc2feae7_master.png"
+                                alt="Áo khoác nỉ bộ trơn GWCS821">
+                            <h1>Áo khoác nỉ bộ trơn GWCS821 </h1>
+                            <p>799,000<sup>đ</sup></p>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo khoác nỉ bộ trơn GWCS821 ', 799000, 'https://cdn.hstatic.net/products/200000690725/_o_web_742ec1f1b7ae413f80140b65cc2feae7_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+
+                        <div class="category-right-content-item">
+                            <img src="https://cdn.hstatic.net/products/200000690725/_o_web_1d67e4a0c4b74eeb81a58a9998618d2e_master.png"
+                                alt="Quần Jeans basic regularfit thêu logo GABJ902">
+                            <h1>Áo khoác bomber GWCU052</h1>
+                            <p>799,000<sup>đ</sup></p>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo khoác bomber GWCU052', 799000, 'https://cdn.hstatic.net/products/200000690725/_o_web_1d67e4a0c4b74eeb81a58a9998618d2e_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <a href="/SanPham/SanPham.html">
+                                <img src="https://cdn.hstatic.net/products/200000690725/_o_web_0bd01a323e3742cf96737e8966d787cd_master.png"
+                                    alt="Áo khoác gió 2 lớp">
+                                <h1>Áo khoác gió 2 lớp GWCW503</h1>
+                                <p>799,000<sup>đ</sup></p>
+                            </a>
+                            <div class="product-buttons">
+                                <button class="btn-detail" onclick="window.location.href='/SanPham/SanPham.html'">Chi
+                                    tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo khoác gió 2 lớp GWCW503', 799000, 'https://cdn.hstatic.net/products/200000690725/_o_web_0bd01a323e3742cf96737e8966d787cd_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <img src="https://cdn.hstatic.net/products/200000690725/_o_web_4a6c0b807aff45b78bfaf5686132f0cb_master.png"
+                                alt="Áo khoác nỉ cổ cao GWCS503">
+                            <h1>Áo khoác nỉ cổ cao GWCS503</h1>
+                            <p>799,000<sup>đ</sup></p>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo khoác nỉ cổ cao GWCS503', 799000, 'https://cdn.hstatic.net/products/200000690725/_o_web_4a6c0b807aff45b78bfaf5686132f0cb_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <img src="https://product.hstatic.net/200000690725/product/1_2b5114bd9c7a4709a872222496cfa425_master.png"
+                                alt="Quần short gió cạp lót chun GSBW005">
+                            <h1>Quần short gió cạp lót chun GSBW005</h1>
+                            <p>799,000<sup>đ</sup></p>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Quần short gió cạp lót chun GSBW005', 799000, 'https://product.hstatic.net/200000690725/product/1_2b5114bd9c7a4709a872222496cfa425_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <img src="https://product.hstatic.net/200000690725/product/tp038-1_2e954120db914978b420e969f044a0cd_master.png"
+                                alt="Quần short Khaki chiết eo gấu LV FSBK015">
+                            <h1>Quần short Khaki chiết eo gấu LV FSBK015</h1>
+                            <p>799,000<sup>đ</sup></p>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Quần short Khaki chiết eo gấu LV FSBK015', 799000, 'https://product.hstatic.net/200000690725/product/tp038-1_2e954120db914978b420e969f044a0cd_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <img src="https://product.hstatic.net/200000690725/product/tp038-1__1__b0131cdc2bb540fea8f54385c04219ca_master.png"
+                                alt="Quần short nỉ basic FSBS004">
+                            <h1>Quần short nỉ basic FSBS004 </h1>
+                            <p>799,000<sup>đ</sup></p>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Quần short nỉ basic FSBS004 ', 799000, 'https://product.hstatic.net/200000690725/product/tp038-1__1__b0131cdc2bb540fea8f54385c04219ca_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <img src="https://product.hstatic.net/200000690725/product/tp038-1__1__bc3025bcfe6d4da4b675722408d31a07_master.png"
+                                alt="Quần pò smart HABF802">
+                            <h1>Quần short đũi basic, có quai nhê FSBI004</h1>
+                            <p>799,000<sup>đ</sup></p>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Quần short đũi basic, có quai nhê FSBI004', 799000, 'https://product.hstatic.net/200000690725/product/tp038-1__1__bc3025bcfe6d4da4b675722408d31a07_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-right-bottom row">
+                        <div class="category-right-bottom-items">
+                            <p>Hiển thị 2 | 3 sản phẩm</p>
+                        </div>
+                        <div class="category-right-bottom-items">
+                            <p>
+                                <span>&#171;</span>
+                                <a href="/pages/danhmuc.html" class="number-page">1</a>
+                                <a href="/pages/trang2.html" class="number-page active">2</a>
+                                <a href="/pages/trang3.html" class="number-page">3</a>
+
+                                <span>&#187;</span>
+                                <a href="/pages/trang3.html" class="number-page">Trang cuối</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Cột 1 -->
+            <div class="footer-col">
+                <h3>Thời trang nam TORANO</h3>
+                <p>
+                    Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam,
+                    hướng tới phong cách nam tính, lịch lãm và trẻ trung.
+                </p>
+
+                <div class="social">
+                    <a class="fb" href="https://www.facebook.com/bach.nguyen.890467?locale=vi_VN"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a class="tw" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="ig" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="tk" href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                    <a class="yt" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+                <h4>Phương thức thanh toán</h4>
+                <div class="payment">
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_1_img.png?v=1075 "></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_2_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_3_img.png?v=1075             "></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_4_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_5_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_6_img.png?v=1075"></a>
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div class="footer-col">
+                <h3>Thông tin liên hệ</h3>
+                <p><b>Địa chỉ:</b> Tầng 8, Tòa nhà 311-313 Trường Chinh, Hà Nội</p>
+                <p><b>Điện thoại:</b> 0964942121</p>
+                <p><b>Fax:</b> 0904636556</p>
+                <p><b>Email:</b> cskh@torano.vn</p>
+
+                <h4>Phương thức vận chuyển</h4>
+                <div class="shipping">
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_1_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_2_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_3_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_4_img.png?v=1075"></a>
+                </div>
+            </div>
+
+            <!-- Cột 3 -->
+            <div class="footer-col">
+                <h3>Nhóm liên kết</h3>
+                <ul>
+                    <li>Tìm kiếm</li>
+                    <li>Giới thiệu</li>
+                    <li>Chính sách đổi trả</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Tuyển dụng</li>
+                    <li>Liên hệ</li>
+                </ul>
+            </div>
+
+            <!-- Cột 4 -->
+            <div class="footer-col">
+                <h3>Đăng ký nhận tin</h3>
+                <p>
+                    Để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt.
+                </p>
+
+                <div class="subscribe">
+                    <input type="text" placeholder="Nhập email của bạn">
+                    <button>ĐĂNG KÝ</button>
+                </div>
+
+                <a href="https://www.bct.gov.vn/" target="_blank">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/footer_logobct_img.png?v=1075 "
+                        class="bct">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="/src/scripts/danhmuc.js"></script>
+
+</html>

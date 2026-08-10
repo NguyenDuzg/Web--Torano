@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torano - Thời trang nam</title>
+    <link rel="stylesheet" href="/src/styles/sanpham.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="https://theme.hstatic.net/200000690725/1001078549/14/logo.png?v=1075" alt="Logo"></a>
+        </div>
+
+        <div class="menu">
+            <li><a href="/pages/danhmuc.html">Sản Phẩm Mới</a></li>
+            <li><a href="/pages/danhmucsale.html">Danh mục sale</a></li>
+            <li><a href="/pages/ao_nam.html">Áo nam</a></li>
+            <li><a href="/pages/quan_nam.html">Quần nam</a></li>
+            <li><a href="#">Phụ kiện</a></li>
+            <li><a href="#">Hệ thống cửa hàng</a></li>
+        </div>
+
+        <div class="icon">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <li><a href="/pages/login.html" class="fa-solid fa-user"></a></li>
+            <li class="cart-wrapper">
+                <a href="javascript:void(0)" class="fa-solid fa-bag-shopping">
+                    <span id="cart-count">0</span> <!-- Số lượng hiển thị trên icon -->
+                </a>
+
+                <!-- Khung hiển thị khi di chuột vào -->
+                <div class="mini-cart">
+                    <h3>Sản phẩm mới thêm</h3>
+                    <ul id="cart-items-list">
+                        <!-- Sản phẩm sẽ tự động hiện ở đây nhờ JavaScript -->
+                        <p class="empty-cart-msg">Giỏ hàng trống</p>
+                    </ul>
+                    <div class="cart-footer">
+                        <p id="total-price-mini" style="padding: 10px; font-weight: bold;"></p>
+                        <a href="/pages/gio_hang.html">Xem giỏ hàng</a>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </header>
+    <!-- --------------------------------------------Products -->
+    <section class="products">
+        <div class="container">
+            <div class="products-top row">
+                <a href="/pages/danhmuc.html">Trang chủ</a>
+                <span>/</span>
+                <a href="/pages/danhmuc.html">Sản Phẩm Mới</a>
+                <span>/</span>
+                <a href="#">Quần Jeans basic slimfit GABJ301</a>
+            </div>
+
+            <div class="products-content row">
+                <div class="products-content-left row">
+                    <div class="products-content-left-big-img">
+                        <img src="https://cdn.hstatic.net/products/200000690725/bj301_69baed4892ad4084a5a035253f233b39_master.png"
+                            alt="">
+                    </div>
+                    <div class="products-content-left-small-img">
+                        <img src="https://cdn.hstatic.net/products/200000690725/0m1a3135_54901405350_o_51c4691c41d244018305e0cb990b02f7_master.jpg"
+                            alt="">
+                        <img src="https://cdn.hstatic.net/products/200000690725/img_3769_54901099456_o_0fea6e624d2844aa910fc28bb2e20674_master.jpg"
+                            alt="">
+                        <img src="https://cdn.hstatic.net/products/200000690725/img_3770_54900227172_o_d5572e0f35e54b4b80ae6e8ab61eb964_master.jpg"
+                            alt="">
+                        <img src="https://cdn.hstatic.net/products/200000690725/img_3791_54901348794_o_a0cf2de35e80413c929fe26c1bcbd272_master.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+
+                <div class="products-content-right">
+                    <div class="products-content-right-name">
+                        <p>Quần Jeans basic slimfit GABJ301</p>
+                    </div>
+                    <div class="products-content-right-code row">
+                        <div>
+                            <p>Mã sản phẩm:<span>GABJ301</span></p>
+                        </div>
+                        <div>
+                            <p>Tình trạng: <span> Còn hàng </span></p>
+                        </div>
+                        <div>
+                            <p>Thương hiệu: <span> TORANO </span></p>
+                        </div>
+                    </div>
+                    <div class="products-content-right-price">
+                        <p>Giá: <span> 790.000đ </span></p>
+                    </div>
+                    <div class="products-content-right-color">
+                        <p>Màu sắc:</p>
+                        <div class="color-options">
+                            <button>Dusty Blue</button>
+                        </div>
+                    </div>
+                    <div class="products-content-right-size">
+                        <p>Kích thước:</p>
+                        <div class="size-options">
+                            <button>S</button>
+                            <button>M</button>
+                            <button>L</button>
+                            <button>XL</button>
+                        </div>
+                    </div>
+                    <div class="products-content-right-quantity row">
+                        <p>Số lượng:</p>
+                        <div class="quantity-controls">
+                            <button class="decrease">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="increase">+</button>
+                        </div>
+                    </div>
+                    <div class="products-content-right-add-to-cart row">
+                        <button class="btn-add-to-cart">Thêm vào giỏ </button>
+                        <a href="/pages/thanhtoan.html"><button class="btn-buy-now">Mua ngay</button></a>
+                    </div>
+                    <div class="products-content-right-bottom">
+                        <div class="btn-get-offer">
+                            <button>CLICK VÀO ĐÂY ĐỂ NHẬN ƯU ĐÃI</button>
+                        </div>
+
+                        <div class="social-share">
+                            <p>Chia sẻ:</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa-solid fa-link"></i> </a>
+                            </div>
+                        </div>
+
+                        <div class="product-services">
+                            <div class="service-item">
+                                <img src="https://theme.hstatic.net/200000690725/1001078549/14/product_info1_desc1_img.png?v=1073"
+                                    alt="icon">
+                                <p>Miễn phí giao hàng cho đơn hàng từ 500K</p>
+                            </div>
+                            <div class="service-item">
+                                <img src="https://theme.hstatic.net/200000690725/1001078549/14/product_info1_desc2_img.png?v=1073"
+                                    alt="icon">
+                                <p>Hàng phân phối chính hãng 100%</p>
+                            </div>
+                            <div class="service-item">
+                                <img src="https://theme.hstatic.net/200000690725/1001078549/14/product_info1_desc3_img.png?v=1073"
+                                    alt="icon">
+                                <p>TỔNG ĐÀI 24/7 : 0964942121</p>
+                            </div>
+                            <div class="service-item">
+                                <img src="https://theme.hstatic.net/200000690725/1001078549/14/product_info2_desc1_img.png?v=1073"
+                                    alt="icon">
+                                <p>ĐỔI SẢN PHẨM DỄ DÀNG (Trong vòng 7 ngày khi còn nguyên tem mác)</p>
+                            </div>
+                            <div class="service-item">
+                                <img src="https://theme.hstatic.net/200000690725/1001078549/14/product_info2_desc2_img.png?v=1073"
+                                    alt="icon">
+                                <p>Kiểm tra, thanh toán khi nhận hàng COD</p>
+                            </div>
+                            <div class="service-item">
+                                <img src="https://theme.hstatic.net/200000690725/1001078549/14/product_info2_desc3_img.png?v=1073"
+                                    alt="icon">
+                                <p>Hỗ trợ bảo hành, đổi sản phẩm tại tất cả store TORANO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mô tả sản phẩm -->
+    <section class="product-description">
+        <div class="container">
+            <h2>Mô tả sản phẩm</h2>
+            <p>
+                -Đẹp, chất lượng cao
+                -Chất liệu: Jeans
+                -Màu sắc: Dusty Blue
+                -Size: S, M, L, XL
+
+            </p>
+        </div>
+
+        <!-- --------------------------------------------Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+
+                <!-- Cột 1 -->
+                <div class="footer-col">
+                    <h3>Thời trang nam TORANO</h3>
+                    <p>
+                        Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam,
+                        hướng tới phong cách nam tính, lịch lãm và trẻ trung.
+                    </p>
+
+                    <div class="social">
+                        <a class="fb" href="https://www.facebook.com/bach.nguyen.890467?locale=vi_VN"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a class="tw" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="ig" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="tk" href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                        <a class="yt" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+
+                    <h4>Phương thức thanh toán</h4>
+                    <div class="payment">
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/payment_1_img.png?v=1075 "></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/payment_2_img.png?v=1075"></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/payment_3_img.png?v=1075             "></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/payment_4_img.png?v=1075"></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/payment_5_img.png?v=1075"></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/payment_6_img.png?v=1075"></a>
+                    </div>
+                </div>
+
+                <!-- Cột 2 -->
+                <div class="footer-col">
+                    <h3>Thông tin liên hệ</h3>
+                    <p><b>Địa chỉ:</b> Tầng 8, Tòa nhà 311-313 Trường Chinh, Hà Nội</p>
+                    <p><b>Điện thoại:</b> 0964942121</p>
+                    <p><b>Fax:</b> 0904636556</p>
+                    <p><b>Email:</b> cskh@torano.vn</p>
+
+                    <h4>Phương thức vận chuyển</h4>
+                    <div class="shipping">
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_1_img.png?v=1075"></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_2_img.png?v=1075"></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_3_img.png?v=1075"></a>
+                        <a href="#" target="_blank"><img
+                                src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_4_img.png?v=1075"></a>
+                    </div>
+                </div>
+
+                <!-- Cột 3 -->
+                <div class="footer-col">
+                    <h3>Nhóm liên kết</h3>
+                    <ul>
+                        <li>Tìm kiếm</li>
+                        <li>Giới thiệu</li>
+                        <li>Chính sách đổi trả</li>
+                        <li>Chính sách bảo mật</li>
+                        <li>Tuyển dụng</li>
+                        <li>Liên hệ</li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4 -->
+                <div class="footer-col">
+                    <h3>Đăng ký nhận tin</h3>
+                    <p>
+                        Để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt.
+                    </p>
+
+                    <div class="subscribe">
+                        <input type="text" placeholder="Nhập email của bạn">
+                        <button>ĐĂNG KÝ</button>
+                    </div>
+
+                    <a href="https://www.bct.gov.vn/" target="_blank">
+                        <img src="https://theme.hstatic.net/200000690725/1001078549/14/footer_logobct_img.png?v=1075 "
+                            class="bct">
+                    </a>
+                </div>
+
+            </div>
+        </footer>
+</body>
+<script src="/src/scripts/sanpham.js"></script>
+
+</html>

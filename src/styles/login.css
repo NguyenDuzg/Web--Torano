@@ -1,20 +1,87 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.auth-section {
+    width: 100%;
+    min-height: 100vh; /* trừ header + footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
 }
-body{
-    background: url('https://picsum.photos/1920/1080') no-repeat center center fixed ;
+
+/* KHÔNG còn box nhỏ nữa */
+.auth-container {
+    width: 100%;
+    max-width: 900px;   /* chỉnh to nhỏ*/
+    padding: 40px 60px;
+    background: #fff;
 }
-.login-box{
-    width: 300px;
-    margin: 100px auto;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 5px;
-}
-.login-box h2{
+
+/* Tabs */
+.auth-tabs {
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 5px 15px;
+    color: #999;
+}
+
+.tab.active {
+    color: black;
+    font-weight: bold;
+}
+
+/* Form */
+.auth-form {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth-form.active {
+    display: flex;
+}
+
+/* input full ngang */
+.auth-form input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #eee;
+    font-size: 15px;
+}
+
+
+.row {
+    display: block;
+}
+
+.row input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* gender */
+.gender {
+    display: flex;
+    gap: 30px;
+}
+
+/* button */
+.auth-form button {
+    width: 200px;
+    padding: 12px;
+    background: #ddd;
+    border: none;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* switch */
+.switch {
+    color: blue;
+    cursor: pointer;
 }

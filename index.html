@@ -1,167 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torano</title>
-    <link href="src/styles/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/1.0.1/css/themify-icons.css">
+    <title>Torano - Thời trang nam</title>
+    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div class="header">Hotline mua hàng: 0353107880 <br>Địa chỉ: P.Nghĩa Tân, Q.Cầu giấy, Thành phố Hà Nội, Việt Nam</div>
-    <div class="nav">
-        <div class="nav-container">
 
-            <a href="#1" class="logo">Torona</a>
-            
-            <ul class="menu">
-                <li><a href="#2">Sản phẩm mới</a>
-                    <ul class="sub-menu">
-                        <li><a href="/products">Áo nam</a></li>
-                        <li><a href="/products">Quần nam</a></li>
-                        <li><a href="/products">Phụ kiện</a></li>
-                    </ul>
-                </li>
-                <li><a href="/products">Danh mục sale</a></li>
-                <li><a href="/about">Áo nam</a></li>
-                <li><a href="/contact">Quần nam</a></li>
-                <li><a href="/contact">Phụ kiện</a></li>
-            </ul>
-            <div class="search">
-                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm...">
-                <!-- <button class="search-btn">🔍</button> -->
-                 <i class="ti-search"></i>
-                
-            </div>
-            <div class="icons">
-                <span><a href="src/pages/login.html" target="_blank">👤</a></span>
-                <span class="icon">🛒</span>
-            </div>
-        </div>
+<header>
+    <div class="logo">
+        <img src="https://theme.hstatic.net/200000690725/1001078549/14/logo.png?v=1075" alt="Logo" width="200">
     </div>
-    <!-- <script>
-        const searchBtn = document.querySelector('.search-btn');
-        const searchInput = document.querySelector('.search-input');
-        
-        searchBtn.addEventListener('click', function() {
-            searchInput.classList.toggle('active');
-            if (searchInput.classList.contains('active')) {
-                searchInput.focus();
-            }
-        });             phần của search
-    </script> -->
-    <section class="banner">
-        <div>
-            <img src="/img/slide_4_img.jpg" alt="Banner" width="100%">
+
+    <div class="menu">
+        <li><a href="/pages/danhmuc.html">Sản phẩm mới</a></li>
+        <li><a href="/pages/danhmucsale.html">Danh mục sale</a></li>
+
+        <li>
+            <a href="/pages/ao_nam.html">Áo nam</a>
+            <ul class="sub-menu">
+                <li><a href="#">Áo Polo</a></li>
+                <li><a href="#">Áo Thun</a></li>
+                <li><a href="#">Áo Sơ Mi</a></li>
+                <li><a href="#">Áo Khoác</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="/pages/quan_nam.html">Quần nam</a>
+            <ul class="sub-menu">
+                <li><a href="#">Quần Jeans</a></li>
+                <li><a href="#">Quần Âu</a></li>
+                <li><a href="#">Quần Jeans</a></li>
+                <li><a href="#">Quần Âu</a></li>
+                <li><a href="#">Quần Short</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Phụ kiện</a>
+            <ul class="sub-menu"><li><a>Thắt Lưng</a></li></ul>    
+        </li>
+        <li><a href="#">Hệ Thống Cửa hàng</a></li>
+    </div>
+
+    <div class="others">
+        <li class="search-box">
+            <input placeholder="Tìm kiếm..." type="text">
+            <i class="fas fa-search"></i>
+        </li>
+        <li><a href="/pages/login.html"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="/pages/danhmuc.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+    </div>
+</header>
+
+    <section id="slider">
+        <div class="aspect-ratio-169">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/slide_1_img.jpg?v=1077" alt="Slide Banner">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/slide_3_img.jpg?v=1077" alt="Slide Banner">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/slide_4_img.jpg?v=1077" alt="Slide Banner">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/a1.png?v=1077" alt="Slide Banner">
+        </div>
+
+        <div class="dot-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
     </section>
 
-    <p class="danh-muc">Danh mục sản phẩm</p>
-    <section class="products">
-            <div class="product-item">
-                <img src="/img/home_category_5_img.jpg" alt="Sản phẩm 1">
-                <a href="#" class="add"><h3>Polo</h3></a>
-            </div>
-            <div class="product-item">
-                <img src="/img/home_category_6_img.jpg" alt="Sản phẩm 2">
-                <a href="#" class="add"><h3>Quần Âu</h3></a>
-            </div>
-            <div class="product-item">
-                <img src="/img/home_category_7_img.jpg" alt="Sản phẩm 3">
-                <a href="#" class="add"><h3>Áo Sơ Mi</h3></a>
-            </div>
-            <div class="product-item">
-                <img src="/img/home_category_8_img.jpg" alt="Sản phẩm 4">
-                <a href="#" class="add"><h3>Áo Thun</h3></a>
-            </div>
+    <section class="danh-muc">
+        <h1>Danh mục sản phẩm</h1>
     </section>
 
-    <!-- sale -->
+    <section class="products">
+        <div class="product-item">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/home_category_1_img.jpg?v=1077">
+            <h3><a href="/pages/ao_nam.html">Polo</a></h3>
+        </div>
+        <div class="product-item">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/home_category_4_img.jpg?v=1077">
+            <h3><a href="/pages/quan_nam.html">Quần Âu</a></h3>
+        </div>
+        <div class="product-item">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/home_category_7_img.jpg?v=1077">
+            <h3><a href="/pages/ao_nam.html">Áo sơ mi</a></h3>
+        </div>
+        <div class="product-item">
+            <img src="https://theme.hstatic.net/200000690725/1001078549/14/home_category_2_img.jpg?v=1077">
+            <h3><a href="/pages/ao_nam.html">Áo thun</a></h3>
+        </div>
+    </section>
 
     <section class="sale-section">
-    
-        <h1>SẢN PHẨM KHUYẾN MÃI</h1>
+        <a href="/pages/danhmucsale.html"><h1>SẢN PHẨM KHUYẾN MÃI</h1></a>
 
-    <div class="product-list">
-
-        <div class="product">
-            <span class="sale">-29%</span>
-            <div class="image">
-                <img src="img/bj902_a5e1046e5223402a95dda9f8409d307f_master.png" alt="product">                
+        <div class="product-list">
+            <div class="product">
+                <span class="sale">-29%</span>
+                <div class="image">
+                    <img src="https://cdn.hstatic.net/products/200000690725/bj902_a5e1046e5223402a95dda9f8409d307f_master.png" alt="product">                
+                </div>
+                <div class="product-info">
+                    <p class="name">Quần Jeans basic regularfit thuê logo GABJ902</p>
+                    <div class="price-box">
+                        <span class="price-sale">499.000đ</span>
+                        <span class="price">699.000đ</span>
+                    </div>
+                </div>
             </div>
-        <p>Quần Jeans basic regularfit thuê logo GABJ902</p>
-        <p class="price-sale">499.000đ</p>
-        <p class="price">699.000đ</p> 
+            
+            <div class="product">
+                <span class="sale">-27%</span>
+                <div class="image">
+                    <img src="https://cdn.hstatic.net/products/200000690725/_o_web_6885a311ce9940899082e6aaac6555e9_master.png" alt="product">                
+                </div>
+                <div class="product-info">
+                    <div class="name">
+                        <p>Áo khoác da lộn basic cổ bẻ lót lông GWCL902</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price-sale">799.000đ</span>
+                        <span class="price">1.099.000đ</span>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="product">
+                <span class="sale">-20%</span>
+                <div class="image">
+                    <img src="https://cdn.hstatic.net/products/200000690725/_o_web__1__e9b6904c88824bf8bd63760e5d181843_master.png" alt="product">                
+                </div>
+                <div class="product-info">
+                    <div class="name">
+                        <p>Áo khoác kaki 2 lớp túi khóa thêu logo ngực lộn GWCJ901</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price-sale">799.000đ</span>
+                        <span class="price">999.000đ</span> 
+                    </div>
+                </div>
+            </div> 
+
+            <div class="product">
+                <span class="sale">-33%</span>
+                <div class="image">
+                    <img src="https://cdn.hstatic.net/products/200000690725/1_3af6f3f2f04e4d5baa7e9494d3f7bf19_master.png" alt="product">                
+                </div>
+                <div class="product-info">
+                    <div class="name">
+                        <p>Quần gió can phối màu túi khóa in logo GWCBW003</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price-sale">399.000đ</span>
+                        <span class="price">599.000đ</span> 
+                    </div>
+                </div>
+            </div> 
+
+            <div class="product">
+                <span class="sale">-39%</span>
+                <div class="image">
+                    <img src="https://cdn.hstatic.net/products/200000690725/_o_web__1__ccfc9e82bcbb4bd58097b472075a6a5c_master.png" alt="product">                
+                </div>
+                <div class="product-info">
+                    <div class="name">
+                        <p>Áo khoác gió 2 lớp mũ tháo rời EWCW001</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price-sale">399.000đ</span>
+                        <span class="price">650.000đ</span>
+                    </div>
+                </div>
+            
+            </div> 
+
+            <div class="product">
+                <span class="sale">-34%</span>
+                <div class="image">
+                    <img src="https://product.hstatic.net/200000690725/product/thiet_ke_chua_co_ten__4__afd7b6bf154041178b9bbcc8e40ce71b_master.png" alt="product">                
+                </div>
+                <div class="product-info">
+                    <div class="name">
+                        <p>Áo Polo trơn bo kẻ FSTP003</p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price-sale">299.000đ</span>
+                        <span class="price">450.000đ</span>
+                    </div>
+                </div>
+            </div> 
         </div>
         
-        <div class="product">
-            <span class="sale">-27%</span>
-            <div class="image">
-                <img src="img/_o_web_6885a311ce9940899082e6aaac6555e9_master.png" alt="product">                
-            </div>
-        <p>Áo khoác da lộn basic cổ bẻ lót lông GWCL902</p>
-        <p class="price-sale">799.000đ</p>
-        <p class="price">1.099.000đ</p> 
-        </div> 
-        
-        <div class="product">
-            <span class="sale">-20%</span>
-            <div class="image">
-                <img src="img/_o_web__1__e9b6904c88824bf8bd63760e5d181843_master.png" alt="product">                
-            </div>
-        <p>Áo khoác da lộn basic cổ bẻ lót lông GWCL902</p>
-        <p class="price-sale">799.000đ</p>
-        <p class="price">999.000đ</p> 
-        </div> 
-
-        <div class="product">
-            <span class="sale">-33%</span>
-            <div class="image">
-                <img src="img/1_3af6f3f2f04e4d5baa7e9494d3f7bf19_master.png" alt="product">                
-            </div>
-        <p>Quần gió can phối màu túi khóa in logo GWCBW003</p>
-        <p class="price-sale">399.000đ</p>
-        <p class="price">599.000đ</p> 
-        </div> 
-
-        <div class="product">
-            <span class="sale">-39%</span>
-            <div class="image">
-                <img src="img/ewcw001_54058980681_o_4edcb4178f4e403897ca2de42da3a52c_master.jpg" alt="product">                
-            </div>
-        <p>Áo khoác gió 2 lớp mũ tháo rời EWCW001</p>
-        <p class="price-sale">399.000đ</p>
-        <p class="price">650.000đ</p> 
-        </div> 
-
-        <div class="product">
-            <span class="sale">-20%</span>
-            <div class="image">
-                <img src="img/_o_web_cd8fd19fbfc84caeb347ed40f2c32071_master.png" alt="product">                
-            </div>
-        <p>Áo khoác gió 2 lớp lót lông cổ cao basic EWCU001</p>
-        <p class="price-sale">599.000đ</p>
-        <p class="price">750.000đ</p> 
-        </div> 
-
-    </div>
+        <div class="more-product">
+            <a href="/pages/danhmucsale.html">Xem thêm sản phẩm</a>
+        </div>
+    </section>
     
+    <section class="last-banner">
+        <img src="https://theme.hstatic.net/200000690725/1001078549/14/a1.png?v=1073">
     </section>
 
-<!-- footer: chưa hoàn thiện -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Về chúng tôi</h3>
-                <p>Torano là thương hiệu thời trang nam hàng đầu tại Việt Nam, mang đến những sản phẩm chất lượng và phong cách đa dạng.</p>
+    <section class="section-home-policy">
+        <div class="policy-item_inner">
+            <div class="policy-item_icon">
+                <i class="fa-solid fa-truck-fast"></i>
             </div>
-            <div class="footer-section">
-                <h3>Liên hệ</h3>
-                <p>Hotline: 0353107880</p>
-                <p>Email: info@torano.vn</p>
+            <div class="policy-item_info">
+                <h3>Miễn phí vận chuyển</h3>
+                <p>Áp dụng cho mọi đơn hàng từ 500k</p>
             </div>
         </div>
-    </footer>
 
+        <div class="policy-item_inner">
+            <div class="policy-item_icon">
+                <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class="policy-item_info">
+                <h3>Đổi hàng dễ dàng</h3>
+                <p>7 ngày đổi hàng vì bất kì lí do gì </p>
+            </div>
+        </div>
+
+        <div class="policy-item_inner">
+            <div class="policy-item_icon">
+               <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="policy-item_info">
+                <h3>Hỗ trợ nhanh chóng</h3>
+                <p>HOTLINE 24/7: 0353107880</p>
+            </div>
+        </div>
+
+        <div class="policy-item_inner">
+            <div class="policy-item_icon">
+                <i class="fas fa-credit-card"></i>
+            </div>
+            <div class="policy-item_info">
+                <h3>Thanh toán đa dạng</h3>
+                <p>Thanh toán khi nhận hàng, Napas, Visa, Chuyển khoản</p>
+            </div>
+        </div>
+    </section>
+
+<footer class="mainFooter">
+    <div class="footer-container">
+        <div class="footer-grid">
+
+            <!-- Cột 1 -->
+            <div class="footer-col">
+                <h2>Thời trang nam TORANO</h2>
+                <p>
+                    Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam,
+                    hướng tới phong cách nam tính, lịch lãm và trẻ trung.
+                </p>
+
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://www.facebook.com/Torano.vn" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+						<a href="index.html" target="_blank" rel="noopener" title="Twitter" aria-label="Twitter">
+							<i class="fa-brands fa-twitter"></i>				
+						</a>
+					</li>
+                    <li>
+					    <a href="https://www.instagram.com/torano.vn/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+							<i class="fa-brands fa-instagram"></i>
+        				</a>
+					</li>
+                    <li>
+					    <a href="https://www.tiktok.com/@torano.vn" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">
+							<i class="fa-brands fa-tiktok"></i>
+						</a>
+					</li>
+                    <li>
+						<a href="https://www.youtube.com/@torano1287" target="_blank" rel="noopener" title="Youtube" aria-label="Youtube">
+							<i class="fa-brands fa-youtube"></i>
+						</a>
+					</li>
+                </ul>
+
+                <h3>Phương thức thanh toán</h3>
+                <div class="payment">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/payment_1_img.png?v=1077">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/payment_2_img.png?v=1077">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/payment_3_img.png?v=1077">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/payment_4_img.png?v=1077">
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div class="footer-col">
+                <h2>Thông tin liên hệ</h2>
+                <ul class="contact">
+                    <li><b>Địa chỉ:</b> Hà Nội</li>
+                    <li><b>Điện thoại:</b> 0964942121</li>
+                    <li><b>Email:</b> cskh@torano.vn</li>
+                </ul>
+
+                <h3>Vận chuyển</h3>
+                <div class="shipment">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_1_img.png?v=1077">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_2_img.png?v=1077">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_3_img.png?v=1077">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_4_img.png?v=1077">
+                </div>
+            </div>
+
+            <!-- Cột 3 -->
+            <div class="footer-col">
+                <h2>Nhóm liên kết</h2>
+                <ul class="links">
+                    <li><a href="#">Tìm kiếm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Bảo mật</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 4 -->
+            <div class="footer-col">
+                <h2>Đăng ký nhận tin</h2>
+                <p>Nhận ưu đãi mới nhất từ chúng tôi</p>
+
+                <div class="subscribe">
+                    <input type="email" placeholder="Nhập email...">
+                    <button>Đăng ký</button>
+                </div>
+                <div class="footer-logobct">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/footer_logobct_img.png?v=1077">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="src/scripts/hide_menu.js"></script>
+<script src="src/scripts/slider.js"></script>
 </body>
+
 </html>

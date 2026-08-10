@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torano - Thời trang nam</title>
+    <link rel="stylesheet" href="/src/styles/danhmuc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="https://theme.hstatic.net/200000690725/1001078549/14/logo.png?v=1075" alt="Tonaro Shop Logo"></a>
+        </div>
+
+        <div class="menu">
+            <li><a href="/pages/danhmuc.html">Sản Phẩm Mới</a></li>
+            <li><a href="/pages/danhmucsale.html">Danh mục sale</a></li>
+            <li><a href="/pages/ao_nam.html">Áo nam</a></li>
+            <li><a href="/pages/quan_nam.html">Quần nam</a></li>
+            <li><a href="#">Phụ kiện</a></li>
+            <li><a href="#">Hệ thống cửa hàng</a></li>
+        </div>
+
+        <div class="icon">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <li><a href="/pages/login.html" class="fa-solid fa-user"></a></li>
+            <li class="cart-wrapper">
+                <a href="javascript:void(0)" class="fa-solid fa-bag-shopping">
+                    <span id="cart-count">0</span> <!-- Số lượng hiển thị trên icon -->
+                </a>
+
+                <!-- Khung hiển thị khi di chuột vào -->
+                <div class="mini-cart">
+                    <h3>Sản phẩm mới thêm</h3>
+                    <ul id="cart-items-list">
+                        <!-- Sản phẩm sẽ tự động hiện ở đây nhờ JavaScript -->
+                        <p class="empty-cart-msg">Giỏ hàng trống</p>
+                    </ul>
+                    <div class="cart-footer">
+                        <a href="/pages/gio_hang.html">Xem giỏ hàng</a>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </header>
+    <!-- -----------------------------------------category -->
+    <section class="category">
+        <div class="contaner">
+            <div class="category-top row">
+                <a href="/pages/danhmuc.html">Trang chủ</a>
+                <span>/</span>
+                <a href="/pages/danhmucsale.html">Danh Mục Sale</a>
+            </div>
+        </div>
+
+        <div class="contaner">
+            <div class="row">
+                <div class="category-left">
+                    <ul>
+                        <li class="category-list-li"><a href="#">Danh mục sản phẩm</a>
+                            <ul class="list">
+                                <li><a href="/pages/danhmuc.html">Sản Phẩm Mới</a></li>
+                                <li><a href="/pages/danhmucsale.html">Danh mục sale</a></li>
+                                <li><a href="/pages/ao_nam.html">Áo nam</a></li>
+                                <li><a href="/pages/quan_nam.html">Quần nam</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                                <li><a href="#">Hệ thống cửa hàng</a></li>
+                            </ul>
+                        </li>
+                        <li class="category-list-li"><a href="#">Khoảng giá</a>
+                            <ul class="list">
+                                <li><a> Dưới 100.000đ</a></li>
+                                <li><a> 100.000đ - 500.000đ</a></li>
+                                <li><a> 500.000đ - 1.000.000đ</a></li>
+                                <li><a> 1.000.000đ - 5.000.000đ</a></li>
+                                <li><a> Trên 5.000.000đ</a></li>
+                            </ul>
+                        </li>
+                        <li class="category-list-li"><a href="#">Size</a>
+                            <ul class="list">
+                                <li><a>XS</a></li>
+                                <li><a>S</a></li>
+                                <li><a>M</a></li>
+                                <li><a>L</a></li>
+                                <li><a>XL</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="category-right row">
+                    <div class="category-right-top-item">
+                        <p>Sản phẩm sale</p>
+                    </div>
+                    <!-- <div class="category-right-top-item">
+                        <button><span>Bộ lọc<i class="fas fa-sort-down"></i></span></button>
+                    </div> -->
+                    <div class="category-right-top-item">
+                        <select>
+                            <option value="">Sản phẩm nổi bật</option>
+                            <option value="">Giá thấp đến cao</option>
+                            <option value="">Giá cao đến thấp</option>
+                            <option value="">Tên A-Z</option>
+                            <option value="">Tên Z-A</option>
+                            <option value="">Mới nhất</option>
+                            <option value="">Cũ nhất</option>
+                        </select>
+                    </div>
+                    <div class="category-right-content row">
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-30%</span>
+                            <img src="https://cdn.hstatic.net/products/200000690725/tb899_7ce6a1c84ef642e9a444042955143be4_master.png"
+                                alt="Áo polo trơn bo kẻ HSTP903">
+                            <h1>Áo polo trơn bo kẻ HSTP903</h1>
+                            <div class="product-price">
+                                <span class="old-price">799,000<sup>đ</sup></span>
+                                <span class="new-price">559,300<sup>đ</sup></span>
+                            </div>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo polo trơn bo kẻ HSTP903', 559300, 'https://cdn.hstatic.net/products/200000690725/tb899_7ce6a1c84ef642e9a444042955143be4_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-20%</span>
+                            <img src="https://cdn.hstatic.net/products/200000690725/tb899_02e545b466294979a4d5f69caa3bb972_master.png"
+                                alt="Quần Jeans basic regularfit thêu logo GABJ902">
+                            <h1>Sơ mi dài tay trơn regularfit GATB899</h1>
+                            <div class="product-price">
+                                <span class="old-price">799,000<sup>đ</sup></span>
+                                <span class="new-price">639,200<sup>đ</sup></span>
+                            </div>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Sơ mi dài tay trơn regularfit GATB899', 639200, 'https://cdn.hstatic.net/products/200000690725/tb899_02e545b466294979a4d5f69caa3bb972_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-20%</span>
+                            <a href="/SanPham/SanPham.html">
+                                <img src="https://cdn.hstatic.net/products/200000690725/_o_web__3__4c93fbdee51544b9be3f41c7e8008aad_master.png"
+                                    alt="Quần âu smart HABF802">
+                                <h1>Áo khoác nỉ cổ bomber GWCS501</h1>
+                                <div class="product-price">
+                                    <span class="old-price">799,000<sup>đ</sup></span>
+                                    <span class="new-price">639,200<sup>đ</sup></span>
+                                </div>
+                            </a>
+                            <div class="product-buttons">
+                                <button class="btn-detail" onclick="window.location.href='/SanPham/SanPham.html'">Chi
+                                    tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo khoác nỉ cổ bomber GWCS501', 639200, 'https://cdn.hstatic.net/products/200000690725/_o_web__3__4c93fbdee51544b9be3f41c7e8008aad_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-20%</span>
+                            <img src="https://cdn.hstatic.net/products/200000690725/tb899_02e545b466294979a4d5f69caa3bb972_master.png"
+                                alt="Áo smart HABF802">
+                            <h1>Áo smart HABF802</h1>
+                            <div class="product-price">
+                                <span class="old-price">799,000<sup>đ</sup></span>
+                                <span class="new-price">639,200<sup>đ</sup></span>
+                            </div>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo smart HABF802', 639200, 'https://cdn.hstatic.net/products/200000690725/tb899_02e545b466294979a4d5f69caa3bb972_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-20%</span>
+                            <img src="https://cdn.hstatic.net/products/200000690725/bt503_47d8117ccf1243ebaab261edfb611360_master.png"
+                                alt="Quần nỉ smart HABF802">
+                            <h1>Quần nỉ smart HABF802</h1>
+                            <div class="product-price">
+                                <span class="old-price">799,000<sup>đ</sup></span>
+                                <span class="new-price">639,200<sup>đ</sup></span>
+                            </div>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Quần nỉ smart HABF802', 639200, 'https://cdn.hstatic.net/products/200000690725/bt503_47d8117ccf1243ebaab261edfb611360_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-20%</span>
+                            <img src="https://cdn.hstatic.net/products/200000690725/bj902_05a4317eca794690aeeada38e087940c_master.png"
+                                alt="Áo smart HABF802">
+                            <h1>Áo smart HABF802</h1>
+                            <div class="product-price">
+                                <span class="old-price">799,000<sup>đ</sup></span>
+                                <span class="new-price">639,200<sup>đ</sup></span>
+                            </div>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Áo smart HABF802', 639200, 'https://cdn.hstatic.net/products/200000690725/bj902_05a4317eca794690aeeada38e087940c_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-20%</span>
+                            <img src="https://cdn.hstatic.net/products/200000690725/bj902_a5e1046e5223402a95dda9f8409d307f_master.png"
+                                alt="Quần âu smart HABF802">
+                            <h1>Quần âu smart HABF802</h1>
+                            <div class="product-price">
+                                <span class="old-price">799,000<sup>đ</sup></span>
+                                <span class="new-price">639,200<sup>đ</sup></span>
+                            </div>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Quần âu smart HABF802', 639200, 'https://cdn.hstatic.net/products/200000690725/bj902_a5e1046e5223402a95dda9f8409d307f_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                        <div class="category-right-content-item">
+                            <span class="sale-badge">-20%</span>
+                            <img src="https://cdn.hstatic.net/products/200000690725/bj301_69baed4892ad4084a5a035253f233b39_master.png"
+                                alt="Quần pò smart HABF802">
+                            <h1>Quần pò smart HABF802</h1>
+                            <div class="product-price">
+                                <span class="old-price">799,000<sup>đ</sup></span>
+                                <span class="new-price">639,200<sup>đ</sup></span>
+                            </div>
+                            <div class="product-buttons">
+                                <button class="btn-detail">Chi tiết</button>
+                                <button class="btn-add-cart"
+                                    onclick="addCart('Quần pò smart HABF802', 639200, 'https://cdn.hstatic.net/products/200000690725/bj301_69baed4892ad4084a5a035253f233b39_master.png')">Thêm
+                                    vào giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Cột 1 -->
+            <div class="footer-col">
+                <h3>Thời trang nam TORANO</h3>
+                <p>
+                    Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam,
+                    hướng tới phong cách nam tính, lịch lãm và trẻ trung.
+                </p>
+
+                <div class="social">
+                    <a class="fb" href="https://www.facebook.com/bach.nguyen.890467?locale=vi_VN"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a class="tw" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="ig" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="tk" href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                    <a class="yt" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+                <h4>Phương thức thanh toán</h4>
+                <div class="payment">
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_1_img.png?v=1075 "></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_2_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_3_img.png?v=1075             "></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_4_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_5_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/payment_6_img.png?v=1075"></a>
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div class="footer-col">
+                <h3>Thông tin liên hệ</h3>
+                <p><b>Địa chỉ:</b> Tầng 8, Tòa nhà 311-313 Trường Chinh, Hà Nội</p>
+                <p><b>Điện thoại:</b> 0964942121</p>
+                <p><b>Fax:</b> 0904636556</p>
+                <p><b>Email:</b> cskh@torano.vn</p>
+
+                <h4>Phương thức vận chuyển</h4>
+                <div class="shipping">
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_1_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_2_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_3_img.png?v=1075"></a>
+                    <a href="#" target="_blank"><img
+                            src="https://theme.hstatic.net/200000690725/1001078549/14/shipment_4_img.png?v=1075"></a>
+                </div>
+            </div>
+
+            <!-- Cột 3 -->
+            <div class="footer-col">
+                <h3>Nhóm liên kết</h3>
+                <ul>
+                    <li>Tìm kiếm</li>
+                    <li>Giới thiệu</li>
+                    <li>Chính sách đổi trả</li>
+                    <li>Chính sách bảo mật</li>
+                    <li>Tuyển dụng</li>
+                    <li>Liên hệ</li>
+                </ul>
+            </div>
+
+            <!-- Cột 4 -->
+            <div class="footer-col">
+                <h3>Đăng ký nhận tin</h3>
+                <p>
+                    Để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt.
+                </p>
+
+                <div class="subscribe">
+                    <input type="text" placeholder="Nhập email của bạn">
+                    <button>ĐĂNG KÝ</button>
+                </div>
+
+                <a href="https://www.bct.gov.vn/" target="_blank">
+                    <img src="https://theme.hstatic.net/200000690725/1001078549/14/footer_logobct_img.png?v=1075 "
+                        class="bct">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="/src/scripts/danhmuc.js"></script>
+
+</html>
